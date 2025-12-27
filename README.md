@@ -1,267 +1,165 @@
-# 🛡️ FraudLens - AI-Powered Cybersecurity Platform
+🛡️ FraudLens – AI-Powered Cybersecurity Platform
 
-![CipherCop Banner](https://img.shields.io/badge/CipherCop-Cybersecurity_Platform-blue?style=for-the-badge&logo=shield)
+FraudLens is a comprehensive, AI-powered cybersecurity platform designed to provide real-time protection against phishing attacks, malware threats, website clones, and phone scams.
+It combines machine learning, computer vision, and advanced AI models to deliver enterprise-grade security intelligence.
 
-A comprehensive, AI-powered cybersecurity platform that provides real-time protection against phishing attacks, malware threats, website clones, and phone scams. CipherCop combines cutting-edge machine learning models, computer vision, and advanced AI to deliver enterprise-grade security solutions.
+🚀 Key Features
+🎯 AI-Powered Phishing Detection
 
-## 🚀 Key Features
+97.4% Accuracy using Gradient Boosting Classifier
 
-### 🎯 **AI-Powered Phishing Detection**
-- **97.4% Accuracy**: Advanced Gradient Boosting Classifier
-- **Real-time URL Analysis**: Domain reputation and WHOIS verification
-- **Google Gemini Integration**: Intelligent content analysis
-- **Multi-Feature Extraction**: 30+ security indicators
+Real-time URL intelligence and domain reputation analysis
 
-### 🔍 **Advanced Clone Detection**
-- **Dual AI System**: Google Gemini + Phishpedia ML models
-- **Computer Vision**: Detectron2-powered visual analysis
-- **Brand Recognition**: 277+ protected brand database
-- **Screenshot Comparison**: Real-time visual similarity detection
+AI-driven content evaluation using Google Gemini
 
-### 🦠 **Comprehensive Malware Analysis**
-- **VirusTotal Integration**: 60+ antivirus engines
-- **Multi-Format Support**: Files, URLs, hashes, and batch analysis
-- **ML-Based Detection**: Custom trained malware classifier
-- **Behavioral Analysis**: Advanced threat categorization
+30+ security-focused feature extraction pipeline
 
-### 📱 **Phone Scam Detection**
-- **Multi-Provider Integration**: Comprehensive scam database
-- **AI Analysis**: Google Gemini-powered content evaluation
-- **Real-time Validation**: Instant phone number verification
-- **Risk Scoring**: Detailed fraud assessment
+🔍 Advanced Website Clone Detection
 
-### 🌐 **Browser Extension**
-- **Real-time Protection**: Passive background monitoring
-- **Clean Interface**: Professional, non-intrusive design
-- **Instant Alerts**: Real-time threat notifications
-- **Privacy-Focused**: No external data storage
+Dual-AI verification using Gemini + Phishpedia models
 
-## 🏗️ Architecture
+Computer vision-based visual similarity analysis
 
-### **Frontend**
-- **React + Vite**: Modern, responsive web interface
-- **Tailwind CSS**: Professional UI design
-- **Real-time Dashboard**: Live threat monitoring
-- **User Authentication**: Secure login system
+Protection against 277+ high-risk brand impersonations
 
-### **Backend Services**
+Screenshot-level comparison for clone identification
 
-#### **Node.js API Server** (Port 5001)
-- Authentication and user management
-- MongoDB integration
-- RESTful API endpoints
-- JWT token-based security
+🦠 Comprehensive Malware Analysis
 
-#### **Python ML Services**
-- **Phishing Detection** (Port 5002): ML-based URL analysis
-- **Malware Analysis** (Port 5004): VirusTotal API integration
-- **Clone Detection** (Ports 5000/5003): Dual AI analysis system
-- **Phone Scam Detection** (Port 5005): Multi-provider validation
+Integration with 60+ antivirus engines
 
-#### **Browser Extension**
-- Chrome extension with Manifest V3
-- Real-time website analysis
-- Background protection
-- Integrated API communication
+Supports files, URLs, and hash-based detection
 
-## 📊 Performance Metrics
+ML-driven malware classification
 
-| Component | Accuracy/Performance | Technology |
-|-----------|---------------------|------------|
-| Phishing Detection | 97.4% | Gradient Boosting + Gemini AI |
-| Clone Detection | 95%+ | Phishpedia + Computer Vision |
-| Malware Scanning | 60+ Engines | VirusTotal API |
-| Response Time | <0.5s average | Optimized ML Pipeline |
+Behavioral threat categorization
 
-## 🛠️ Installation
+📱 Phone Scam Detection
 
-### Prerequisites
-- **Node.js** (v16+)
-- **Python** (3.8+)
-- **MongoDB** (for data storage)
-- **Google Cloud Account** (for AI services)
-- **Chrome Browser** (for extension)
+Multi-provider scam intelligence aggregation
 
-## 🎯 Usage
+AI-powered text and pattern analysis
 
-### Web Dashboard
-1. Navigate to `http://localhost:5173`
-2. Create account or login
-3. Access protection modules:
-   - **Phishing Scanner**: Analyze URLs and email content
-   - **Malware Detector**: Upload files for analysis
-   - **Clone Checker**: Verify website authenticity
-   - **Scam Detector**: Validate phone numbers
+Real-time phone number risk scoring
 
-### Browser Extension
-1. Click the CipherCop extension icon
-2. Choose analysis type:
-   - **Clone Score**: Check current website
-   - **Phishing Analysis**: Comprehensive security scan
-3. View real-time results and recommendations
+Fraud probability assessment
 
-### API Integration
-```javascript
-// Phishing Detection
-POST http://localhost:5001/api/phishing/analyze
-{
-  "url": "https://suspicious-site.com"
-}
+🌐 Browser Extension
 
-// Clone Detection
-POST http://localhost:5003/analyze
-{
-  "url": "https://potential-clone.com"
-}
+Real-time passive protection
 
-// Malware Analysis
-POST http://localhost:5004/analyze
-// Upload file for analysis
-```
+Background threat monitoring
 
-## 🔧 Configuration
+Instant alerts with risk explanations
 
-### API Keys Required
-- **Google Gemini API**: For AI-powered analysis
-- **VirusTotal API**: For malware scanning
-- **Google Cloud Vision**: For image analysis
-- **MongoDB**: For data persistence
+Privacy-first design with zero data persistence
 
-### Service Configuration
-Each service can be configured via environment variables:
-- Database connections
-- API endpoints
-- ML model parameters
-- Security settings
+🏗️ Platform Architecture (High-Level)
+Frontend
 
-## 🧪 Testing
+Modern React-based interface
 
-### Automated Tests
-```bash
-# Run all tests
-npm test
+Real-time security dashboards
 
-# Python service tests
-python -m pytest backend_py/tests/
-```
+Secure authentication and session handling
 
-### Manual Testing
-- Test phishing URLs with known samples
-- Upload malware test files (EICAR test)
-- Verify clone detection with brand websites
-- Test phone number validation
+Backend
 
-## 📁 Project Structure
+Distributed microservices architecture
 
-```
-ciphercopdemo/
-├── frontend/                 # React web application
-│   ├── src/
-│   │   ├── components/      # UI components
-│   │   ├── logins/          # Authentication pages
-│   │   └── context/         # State management
-├── backend/                 # Node.js API server
-│   ├── src/
-│   │   ├── controller/      # Route handlers
-│   │   ├── models/          # Database models
-│   │   └── checks/          # Security modules
-├── backend_py/              # Python ML services
-│   ├── clone-detection/     # AI clone detection
-│   ├── phishing-detection/  # ML phishing analysis
-│   ├── malware-detection/   # VirusTotal integration
-│   └── phone-number-detection/ # Scam validation
-├── extension/               # Chrome browser extension
-│   ├── popup/              # Extension UI
-│   ├── utils/              # Helper functions
-│   └── manifest.json       # Extension configuration
-└── docs/                   # Documentation
-```
+Node.js authentication & orchestration layer
 
-## 🔒 Security Features
+Python-based ML inference services
 
-### **Data Protection**
-- JWT-based authentication
-- Encrypted API communications
-- No sensitive data logging
-- GDPR-compliant privacy
+Secure API communication using JWT
 
-### **Threat Detection**
-- Real-time analysis pipeline
-- Multi-vector threat assessment
-- Behavioral pattern recognition
-- Zero-day threat identification
+AI & ML Layer
 
-### **Privacy Safeguards**
-- Local data processing
-- No external data sharing
-- Anonymized analytics
-- User consent management
+Gradient Boosting classifiers
 
-## 🤝 Contributing
+Computer vision pipelines
 
-We welcome contributions! Please follow these steps:
+NLP-based scam analysis
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit changes (`git commit -m 'Add AmazingFeature'`)
-4. Push to branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+Multi-signal threat correlation
 
-### Development Guidelines
-- Follow code style conventions
-- Add tests for new features
-- Update documentation
-- Ensure security best practices
+📊 Performance Metrics
+Component	Performance
+Phishing Detection	97.4% Accuracy
+Clone Detection	95%+ Precision
+Malware Analysis	60+ Engines
+Average Response Time	< 0.5 seconds
+🔒 Security & Privacy
+Data Protection
 
-## 📄 License
+Token-based authentication
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+Encrypted API communications
 
-## 🆘 Support
+No sensitive data logging
 
-### Documentation
-- [Installation Guide](docs/installation.md)
-- [API Documentation](docs/api.md)
-- [Configuration Guide](docs/configuration.md)
-- [Troubleshooting](docs/troubleshooting.md)
+GDPR-aligned privacy principles
 
-### Community
-- **Issues**: Report bugs and feature requests
-- **Discussions**: Community Q&A and ideas
-- **Discord**: Real-time community support
-- **Email**: professional-support@ciphercop.com
+Threat Intelligence
 
-## 🙏 Acknowledgments
+Multi-vector threat analysis
 
-- **Phishpedia**: Visual phishing detection research (USENIX Security 2021)
-- **Google Gemini**: Advanced AI capabilities
-- **VirusTotal**: Comprehensive malware detection
-- **Detectron2**: Computer vision framework
-- **Open Source Community**: Various libraries and tools
+Behavioral pattern recognition
 
-## 📈 Roadmap
+Zero-day threat awareness
 
-### **Upcoming Features**
-- [ ] Mobile application
-- [ ] Enterprise dashboard
-- [ ] Advanced threat intelligence
-- [ ] Real-time threat feeds
-- [ ] Custom ML model training
-- [ ] API rate limiting and scaling
+Privacy Safeguards
 
-### **Version History**
-- **v1.0.0**: Initial release with core features
-- **v1.1.0**: Enhanced AI models and UI improvements
-- **v1.2.0**: Browser extension and API optimizations
+No external user data storage
 
----
+Localized processing where possible
+
+Explicit user consent controls
+
+📄 License
+
+This project is licensed under the MIT License.
+
+🙏 Acknowledgments
+
+Phishpedia – Visual phishing research (USENIX Security 2021)
+
+Google Gemini – Advanced AI analysis
+
+VirusTotal – Malware intelligence
+
+Detectron2 – Computer vision framework
+
+Open-source community
+
+📈 Roadmap
+Upcoming Enhancements
+
+Mobile application
+
+Enterprise-grade dashboard
+
+Threat intelligence feeds
+
+Custom ML model training
+
+Scalable API rate-limiting
+
+Version Highlights
+
+v1.0.0 – Core AI detection engine
+
+v1.1.0 – Improved ML accuracy & UI
+
+v1.2.0 – Browser extension support
 
 <div align="center">
 
-**🛡️ Protecting the digital world, one threat at a time 🛡️**
+🛡️ Protecting the digital world, one threat at a time 🛡️
 
-[![Made with ❤️](https://img.shields.io/badge/Made%20with-❤️-red.svg)](https://github.com/your-org/ciphercop-demo)
-[![AI Powered](https://img.shields.io/badge/AI-Powered-blue.svg)](https://github.com/your-org/ciphercop-demo)
-[![Security First](https://img.shields.io/badge/Security-First-green.svg)](https://github.com/your-org/ciphercop-demo)
+
+
+
+
 
 </div>
