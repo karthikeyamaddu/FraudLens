@@ -1,4 +1,4 @@
-# 🛡️ CipherCop - AI-Powered Cybersecurity Platform
+# 🛡️ FraudLens - AI-Powered Cybersecurity Platform
 
 ![CipherCop Banner](https://img.shields.io/badge/CipherCop-Cybersecurity_Platform-blue?style=for-the-badge&logo=shield)
 
@@ -81,72 +81,6 @@ A comprehensive, AI-powered cybersecurity platform that provides real-time prote
 - **MongoDB** (for data storage)
 - **Google Cloud Account** (for AI services)
 - **Chrome Browser** (for extension)
-
-### Quick Start
-
-1. **Clone the Repository**
-```bash
-git clone https://github.com/your-org/ciphercop-demo.git
-cd ciphercopdemo
-```
-
-2. **Environment Setup**
-```bash
-# Copy environment files
-cp backend/env.txt backend/.env
-cp backend_py/*/env.txt backend_py/*/.env
-
-# Configure API keys in .env files
-# - GEMINI_API_KEY
-# - VIRUSTOTAL_API_KEY
-# - MONGODB_URI
-```
-
-3. **Install Dependencies**
-```bash
-# Frontend
-cd frontend
-npm install
-npm run dev  # Runs on http://localhost:5173
-
-# Backend (Node.js)
-cd ../backend
-npm install
-npm start    # Runs on http://localhost:5001
-
-# Python Services
-cd ../backend_py
-pip install -r requirements.txt
-```
-
-4. **Start Services**
-```bash
-# Clone Detection (Gemini)
-cd backend_py/clone-detection/gemini
-python app.py  # Port 5003
-
-# Clone Detection (Phishpedia)
-cd ../phishpedia+detectron2/Phishpedia/WEBtool
-python app.py  # Port 5000
-
-# Phishing Detection
-cd ../../phishing-detection/phishing-url-ml
-python app.py  # Port 5002
-
-# Malware Detection
-cd ../../malware-detection/ml-detection/ML_based_detectionn
-python app.py  # Port 5004
-
-# Phone Scam Detection
-cd ../../phone-number-detection
-python app.py  # Port 5005
-```
-
-5. **Install Browser Extension**
-```bash
-# Open Chrome -> Extensions -> Developer Mode
-# Load unpacked -> Select /extension folder
-```
 
 ## 🎯 Usage
 
